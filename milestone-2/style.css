@@ -19,7 +19,7 @@
 }
 
 .carta{
-    min-height: 450px;
+    height: 550px;
     width: 300px;
     background-color:rgb(49, 49, 49) ;
 }
@@ -28,7 +28,7 @@ img{
     height: auto!important;
 }
 
-p,span{
+h2,span{
     color: white;
     margin: 20px 0px;
 }

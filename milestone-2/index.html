@@ -18,6 +18,13 @@
 
 
         <div class="row align-items-center justify-contet-center text-center main">
+            <div v-for="(elementi,index) in mioArray" :key="index" 
+            class='carta d-flex flex-column justify-content-start align-items-center text-center pt-5 m-5'>
+                <img :src="elementi.poster">;
+                <h2>{{elementi.title}}</h2>;
+                <span>{{elementi.author}}</span>;
+                <span>{{elementi.year}}</span>";
+            </div>
         </div>
     </div>
 
@@ -30,7 +37,8 @@
         let app = new Vue({
             el: '#app',
             data: {
-                apiURL : "http://localhost/php-ajax-dischi/milestone-2/api.php"
+                apiURL : "http://localhost/php-ajax-dischi/milestone-2/api.php",
+                mioArray : []
             },
             methods: {
                 getCanzoni(){
@@ -39,7 +47,6 @@
                 .then( (risposta) => {
                     // handle success
                     this.mioArray = risposta.data;
-                    console.log(risposta.data);
                 })
                 .catch(function (error) {
                     // handle error

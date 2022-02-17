@@ -71,7 +71,7 @@ $database = [
             <?php foreach($database as $elementi){
                 echo "<div class='carta d-flex flex-column justify-content-start align-items-center text-center pt-5 m-5'>";
                 echo "<img src=".$elementi["poster"].">";
-                echo "<p>".$elementi["title"]."</p>";
+                echo "<h2>".$elementi["title"]."</h2>";
                 echo "<span>".$elementi["author"]."</span>";
                 echo "<span>".$elementi["year"]."</span>";
                 echo "</div>";
